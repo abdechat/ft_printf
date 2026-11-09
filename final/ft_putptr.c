@@ -6,7 +6,7 @@
 /*   By: achancha <achancha@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 11:15:35 by achancha          #+#    #+#             */
-/*   Updated: 2026/11/09 11:15:37 by achancha         ###   ########.fr       */
+/*   Updated: 2026/11/09 14:37:09 by achancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,11 @@ int	ft_pointer(void *add)
 	int				j;
 
 	sum = 0;
+	if (!add)
+	{
+		sum = ft_putstr("(nil)");
+		return (sum);
+	}
 	addres = (unsigned long)add;
 	sum = write(1, "0x", 2);
 	if (sum != 2)
