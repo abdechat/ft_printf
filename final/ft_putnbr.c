@@ -14,28 +14,28 @@
 
 int	ft_putnbr(int nb)
 {
+	long	n;
+	int		j;
 	int		sum;
 	char	c;
 
+	n = (long)nb;
 	sum = 0;
-	if (nb == -2147483648)
+	j = 0;
+	if (n < 0)
 	{
-		sum = write(1, "-2147483648", 11);
-		return (sum);
-	}
-	if (nb < 0)
-	{
-		sum = write(1, "-", 1);
-		if (sum == -1)
+		if (write(1, "-", 1) != 1)
 			return (-1);
-		nb = -nb;
+		sum++;
+		n = -n;
 	}
-	if (nb > 9)
-		sum += ft_putnbr(nb / 10);
-	if (sum < 0)
+	if (n > 9)
+		j = ft_putnbr(n / 10);
+	if (j < 0)
 		return (-1);
-	c = (nb % 10) + 48;
-	if (write(1, &c, 1) == -1)
+	sum += j;
+	c = (n % 10) + 48;
+	if (write(1, &c, 1) != 1)
 		return (-1);
 	return (sum + 1);
 }

@@ -19,6 +19,8 @@ int	ft_putstr(char *str)
 	if (!str)
 	{
 		i = write(1, "(null)", 6);
+		if (i != 6)
+			return (-1);
 		return (i);
 	}
 	i = 0;

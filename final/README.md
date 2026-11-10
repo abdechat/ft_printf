@@ -66,9 +66,8 @@ The project uses `va_list` to handle variable arguments and an integer counter t
 
 - `man 3 printf` — printf documentation.
 - `man 3 stdarg` — Variadic functions documentation.
-- `man 2 write` — write system call documentation.
 - [cppreference - Variadic arguments](https://en.cppreference.com/w/c/variadic)
-- [GNU C Library - Formatted Output](https://www.gnu.org/software/libc/manual/html_node/Formatted-Output.html)
+- * [CPU Registers - GeeksforGeeks](https://www.geeksforgeeks.org/computer-organization-architecture/general-purpose-registers/)
 
 ### AI Usage
 
